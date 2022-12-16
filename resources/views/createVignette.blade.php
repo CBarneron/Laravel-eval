@@ -21,7 +21,7 @@
     </div>
     <div class="mb-3">
     <label for="Url" class="form-label">Url</label>
-    <input type="text" name='Url' class="form-control" id="Url">
+    <input type="text" name='Url' class="form-control" id="Url" value="https://cataas.com/cat">
     </div>
     <div class="mb-3">
         <label for="Description" class="form-label">Description</label>

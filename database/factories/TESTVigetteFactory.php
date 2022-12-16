@@ -18,7 +18,7 @@ class VigetteFactory extends Factory
     {
         return [
                 'Legende'=>fake()->word(),
-                'Url'->Url('https://cataas.com/cat'),
+                'Url'=>('https://cataas.com/cat'),
                 'Description'=>fake()->paragraph(),
                 'Statut'=>fake()->$table->boolean(),
         ];

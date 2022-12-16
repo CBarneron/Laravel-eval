@@ -15,6 +15,6 @@ class PicatsasTableSeeder extends Seeder
      */
     public function run()
     {
-        Vignette::factory()->count(10)->create();
+        Picatsa::factory()->count(10)->create();
     }
 }

@@ -1,14 +1,22 @@
 @extends('layouts.app')
 @section('content')
-<div>
+{{-- <div>
     <tr>
         <th scope="row">{{$vignette -> id}}</th>
         <td>{{$vignette -> Legende}}</td>
-        <img src="{{$vignette->Url}}" alt="{{$vignette-> Description}}">
-        <p>{{$vignette->Description}}</p>
-        <p>{{$vignette->Statut}}</p>
+        <td><img src="{{$vignette->Url}}" alt="{{$vignette-> Description}}"></td>
+        <td><p>{{$vignette->Description}}</p></td>
+        <td><p>{{$vignette->Statut}}</p></th>
     </tr>
-</div>
+</div> --}}
+<div class="card" style="width: 18rem;">
+    <img src="{{$vignette->Url}}" alt="{{$vignette-> Description}}" class="card-img-top" >
+    <div class="card-body">
+      <h5 class="card-title">{{$vignette -> Legende}}</h5>
+      <p class="card-text">{{$vignette->Description}}</p>  
+      <p class="card-text">{{$vignette->Statut}}</p>    
+    </div>
+  </div>
 
 
 @endsection()

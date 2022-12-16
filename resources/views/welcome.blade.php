@@ -1,23 +1,28 @@
 @extends ('layouts.app')
 @section('content')
-<h1>TABLE DES vignette</h1>
-<table class="table">
-  <thead>
-    
-  </thead>
-  <tbody>
-    @foreach ($Vignettes as $vignette )
-    <tr>
-      <th scope="row">{{$vignette -> id}}</th>
-      <td>{{$vignette -> Legende}}</td>
-      <img src="{{$vignette->Url}}" alt="{{$vignette-> Description}}">
-      <p>{{$vignette->Description}}</p>
-      <p>{{$vignette->statut}}</p>
-    </tr>
-    @endforeach
+<h1>Table des vignette</h1>
 
-  </tbody>
-</table>
+<section>
+  <div class="row">
+    @foreach ($Vignettes as $vignette )
+ 
+  <div class="card col-md-4 col-sm-4 m-2" style="width:18rem;" >
+    <div class="card-header">
+      {{$vignette -> Legende}} - {{$vignette -> id}}
+    </div>
+    <img src="{{$vignette->Url}}" alt="{{$vignette-> Description}}" class="card-img-top" >
+    <div class="card-body">
+      
+      <p class="card-text text-center">{{$vignette->Description}}</p>  
+      <p class="card-text">{{$vignette->Statut}}</p>    
+      
+  </div>
+      
+  </div>
+  @endforeach
+</div>
+</section>
+
 </body>
 
 @endsection

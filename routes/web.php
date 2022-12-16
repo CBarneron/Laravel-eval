@@ -17,8 +17,8 @@ use App\Http\Controllers\VignetteController;
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 Auth::routes();
 Route::resource('vignette',VignetteController::class);
-// Route::get('/vignette', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('vignette', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
